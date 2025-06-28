@@ -1,4 +1,4 @@
-# LinguaCards 🗣️
+# LinguaCards 🗣
 
 An interactive language learning application built with React, TypeScript, and Vite. Master languages through beautiful, animated flashcards with speech synthesis and progress tracking.
 
@@ -18,7 +18,7 @@ An interactive language learning application built with React, TypeScript, and V
 - **Responsive Design**: Works seamlessly on desktop and mobile devices
 - **Real-time Progress**: Visual progress bars and score tracking
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Prerequisites
 
@@ -52,7 +52,7 @@ An interactive language learning application built with React, TypeScript, and V
 
 ```
 
-## 🎯 How to Use
+## How to Use
 
 ### 1. Language Selection
 - Choose your target language from the dropdown menu
@@ -75,7 +75,7 @@ An interactive language learning application built with React, TypeScript, and V
 - **Score Board**: Track your score, streak, and completed cards
 - **Card Counter**: See your current position in the deck
 
-## 🛠️ Development
+## Development
 
 ### Available Scripts
 
@@ -147,7 +147,7 @@ The application uses Tailwind CSS for styling. Key customization points:
 
 **Note**: Speech synthesis features work best in Chrome and may have limited support in some browsers.
 
-## 🤝 Contributing
+## Contributing
 
 1. Fork the repository
 2. Create a feature branch (`git checkout -b feature/amazing-feature`)
@@ -167,13 +167,13 @@ The application uses Tailwind CSS for styling. Key customization points:
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - Icons provided by [Lucide React](https://lucide.dev/)
 - Built with [Vite](https://vitejs.dev/)
 - Styled with [Tailwind CSS](https://tailwindcss.com/)
 
-## 📞 Support
+## Support
 
 If you encounter any issues or have questions:
 
@@ -183,4 +183,4 @@ If you encounter any issues or have questions:
 
 ---
 
-**Happy Learning! 🌍✨** 
+**Happy Learning! 
