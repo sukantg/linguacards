@@ -46,6 +46,54 @@ export const Flashcard: React.FC<FlashcardProps> = ({
     setTimeout(onNext, 500);
   };
 
+  const ActionButtons = () => (
+    <div className="mt-6 flex flex-wrap gap-3 justify-center">
+      <button
+        onClick={() => handleStatusChange({ learned: true })}
+        className={`flex items-center gap-2 px-6 py-3 rounded-xl font-medium transition-all duration-200 ${
+          cardStatus.learned 
+            ? 'bg-green-500 text-white shadow-lg' 
+            : 'bg-green-500/20 text-green-300 border border-green-500/30 hover:bg-green-500/30'
+        }`}
+      >
+        <CheckCircle className="w-5 h-5" />
+        Learned
+      </button>
+      
+      <button
+        onClick={() => handleStatusChange({ difficult: true })}
+        className={`flex items-center gap-2 px-6 py-3 rounded-xl font-medium transition-all duration-200 ${
+          cardStatus.difficult 
+            ? 'bg-red-500 text-white shadow-lg' 
+            : 'bg-red-500/20 text-red-300 border border-red-500/30 hover:bg-red-500/30'
+        }`}
+      >
+        <XCircle className="w-5 h-5" />
+        Difficult
+      </button>
+      
+      <button
+        onClick={() => handleStatusChange({ needsReview: true })}
+        className={`flex items-center gap-2 px-6 py-3 rounded-xl font-medium transition-all duration-200 ${
+          cardStatus.needsReview 
+            ? 'bg-yellow-500 text-white shadow-lg' 
+            : 'bg-yellow-500/20 text-yellow-300 border border-yellow-500/30 hover:bg-yellow-500/30'
+        }`}
+      >
+        <AlertCircle className="w-5 h-5" />
+        Review
+      </button>
+      
+      <button
+        onClick={onNext}
+        className="flex items-center gap-2 px-6 py-3 bg-blue-500/20 text-blue-300 border border-blue-500/30 rounded-xl font-medium 
+                   hover:bg-blue-500/30 transition-all duration-200"
+      >
+        Next Section <ArrowRight className="w-5 h-5" />
+      </button>
+    </div>
+  );
+
   return (
     <div className="w-full max-w-2xl mx-auto">
       <div className="relative">
@@ -110,54 +158,8 @@ export const Flashcard: React.FC<FlashcardProps> = ({
           </div>
         </div>
 
-        {/* Action Buttons */}
-        {isFlipped && (
-          <div className="mt-6 flex flex-wrap gap-3 justify-center">
-            <button
-              onClick={() => handleStatusChange({ learned: true })}
-              className={`flex items-center gap-2 px-6 py-3 rounded-xl font-medium transition-all duration-200 ${
-                cardStatus.learned 
-                  ? 'bg-green-500 text-white shadow-lg' 
-                  : 'bg-green-500/20 text-green-300 border border-green-500/30 hover:bg-green-500/30'
-              }`}
-            >
-              <CheckCircle className="w-5 h-5" />
-              Learned
-            </button>
-            
-            <button
-              onClick={() => handleStatusChange({ difficult: true })}
-              className={`flex items-center gap-2 px-6 py-3 rounded-xl font-medium transition-all duration-200 ${
-                cardStatus.difficult 
-                  ? 'bg-red-500 text-white shadow-lg' 
-                  : 'bg-red-500/20 text-red-300 border border-red-500/30 hover:bg-red-500/30'
-              }`}
-            >
-              <XCircle className="w-5 h-5" />
-              Difficult
-            </button>
-            
-            <button
-              onClick={() => handleStatusChange({ needsReview: true })}
-              className={`flex items-center gap-2 px-6 py-3 rounded-xl font-medium transition-all duration-200 ${
-                cardStatus.needsReview 
-                  ? 'bg-yellow-500 text-white shadow-lg' 
-                  : 'bg-yellow-500/20 text-yellow-300 border border-yellow-500/30 hover:bg-yellow-500/30'
-              }`}
-            >
-              <AlertCircle className="w-5 h-5" />
-              Review
-            </button>
-            
-            <button
-              onClick={onNext}
-              className="flex items-center gap-2 px-6 py-3 bg-blue-500/20 text-blue-300 border border-blue-500/30 rounded-xl font-medium 
-                         hover:bg-blue-500/30 transition-all duration-200"
-            >
-              Next <ArrowRight className="w-5 h-5" />
-            </button>
-          </div>
-        )}
+        {/* Action Buttons - Now shown on both sides */}
+        <ActionButtons />
       </div>
     </div>
   );
