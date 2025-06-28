@@ -50,7 +50,6 @@ An interactive language learning application built with React, TypeScript, and V
 4. **Open your browser**
    Navigate to `http://localhost:5173` to see the application running.
 
-```
 
 ## How to Use
 
